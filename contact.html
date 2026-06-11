@@ -16,19 +16,55 @@
       <p>We are ready to help with your next website, product launch, or service upgrade.</p>
     </section>
 
-    <section class="contact-grid">
-      <article>
+    <section class="layout-grid layout-grid--2 contact-grid">
+      <article class="card">
         <h2>Contact</h2>
-        <p>Email us at <a href="mailto:hello@example.com">hello@example.com</a> or call <a href="tel:+1234567890">+1 (234) 567-890</a>.</p>
+        <form class="contact-form">
+          <div class="form-row">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-control" type="text" id="subject" name="subject" placeholder="Project inquiry">
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your needs..."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+        <div class="alert">
+          <p>We respond to contact submissions within 1-2 business days during normal hours.</p>
+          <button class="alert-close" type="button" aria-label="Dismiss alert">×</button>
+        </div>
       </article>
-      <article>
+      <article class="card">
         <h2>FAQ</h2>
-        <dl>
-          <dt>Do you support mobile-first design?</dt>
-          <dd>Yes — every page is designed to adapt cleanly to desktop, tablet, and mobile views.</dd>
-          <dt>Can I use these pages as a basis for a real site?</dt>
-          <dd>Absolutely — the structure uses HTML5 semantics, external CSS/JS, and responsive layout techniques.</dd>
-        </dl>
+        <div class="accordion" role="tablist">
+          <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="faq1">Do you support mobile-first design?</button>
+            <div id="faq1" class="accordion-panel" role="region">
+              <p>Yes — every page is designed to adapt cleanly to desktop, tablet, and mobile views.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="faq2">Can I use these pages as a basis for a real site?</button>
+            <div id="faq2" class="accordion-panel" role="region">
+              <p>Absolutely — the structure uses HTML5 semantics, external CSS/JS, and responsive layout techniques.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-button" aria-expanded="false" aria-controls="faq3">Is the navigation accessible across devices?</button>
+            <div id="faq3" class="accordion-panel" role="region">
+              <p>Yes — navigation is shared across pages and includes a responsive hamburger menu on small screens.</p>
+            </div>
+          </div>
+        </div>
       </article>
     </section>
   </main>
