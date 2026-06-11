@@ -1,11 +1,11 @@
 :root {
-  --bg: #f5f7fb;
+  --bg: #fff5fb;
   --surface: #ffffff;
   --text: #1f2937;
-  --muted: #4b5563;
+  --muted: #d63384; /* pink */
   --primary: #2f6dff;
   --primary-strong: #1d4ed8;
-  --border: rgba(15, 23, 42, 0.08);
+  --border: rgba(214, 51, 132, 0.12); /* pink-tinged border */
   --radius: 22px;
   --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
 }

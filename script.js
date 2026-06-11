@@ -124,6 +124,14 @@ function setupModal() {
     button.addEventListener('click', closeModal);
   });
 
+  // Delegated handler: ensure any dynamically-added or nested .modal-close buttons work
+  document.addEventListener('click', (event) => {
+    const btn = event.target.closest && event.target.closest('.modal-close');
+    if (btn) {
+      closeModal();
+    }
+  });
+
   if (backdrop) {
     backdrop.addEventListener('click', (event) => {
       if (event.target === backdrop) {
